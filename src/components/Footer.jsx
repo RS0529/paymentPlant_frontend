@@ -1,7 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import {  FaLocationArrow, FaMedal, FaPhone, } from "react-icons/fa";
+import { CgPhone } from "react-icons/cg";
+import {AiOutlineMail} from 'react-icons/ai'
 
 const Footer = () => {
   const Wrapper = styled.section`
@@ -30,6 +31,14 @@ const Footer = () => {
           }
         }
       }
+      .navbar-link{
+        text-transform: uppercase;
+        color:#fff ;
+        /* gap : 2rem; */
+        padding: 2rem 0.4rem ;
+        font-size:20px ;
+
+      }
       .footer-bottom--section {
         padding-top: 9rem;
         hr {
@@ -51,39 +60,56 @@ const Footer = () => {
       <footer>
         <div className="container grid grid-four-column">
           <div className="footer-about">
-            <h3>Coder Ravindra</h3>
-            <p>Something .... new</p>
+            <img src="" className="" />
+            <h3>Payment Planet</h3>
+            <p>
+              Our Debit Card Program Makes It Easy To Get The Most Out Of Your
+              Everyday Spending.
+            </p>
           </div>
           <div className="footer-services">
             <h3>Services</h3>
-            <li>
-              <NavLink to="/">Plant</NavLink>
-            </li>
-            <li>
-              <NavLink to="/">Payment</NavLink>
-            </li>
-            <li>
-              <NavLink to="/">Prepaid</NavLink>
-            </li>
-            <li>
-              <NavLink to="/">Card</NavLink>
-            </li>
+            <ul className="footer-navlink">
+              <li>
+                <NavLink to="/" className="navbar-link">
+                  Plant
+                </NavLink>
+              </li>
+              <br /> <br />
+              <li>
+                <NavLink to="/payment" className="navbar-link">
+                  Payment
+                </NavLink>
+              </li>
+              <br /> <br />
+              <li>
+                <NavLink to="/prepaid" className="navbar-link">
+                  Prepaid
+                </NavLink>
+              </li>
+              <br /> <br />
+              <li>
+                <NavLink to="/card" className="navbar-link">
+                  Card
+                </NavLink>
+              </li>
+            </ul>
           </div>
 
           <div className="">
-            <h3>Contact  Us</h3>
+            <h3>Contact Us</h3>
             <div className="footer-social--icons">
-             <FaPhone/>
-             <FaLocationArrow/>
-             <FaMedal/>
+              <CgPhone className="icons" />
+              <AiOutlineMail className="icons" />
+
             </div>
           </div>
 
           {/* 4th column  */}
           <div className="footer-appstore">
-        <picture>
-            <img src="images/playstore.jpg" />
-        </picture>
+            <picture>
+              <img src="images/playstore.jpg" />
+            </picture>
           </div>
         </div>
 

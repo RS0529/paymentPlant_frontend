@@ -18,7 +18,7 @@ const ErrorPage = () => {
 
   return (
     <Wrapper>
-      <img src="/images/error1.svg" alt="error" />
+      <img src="/images/" alt="error" />
       <NavLink to="/">
         <Button className="btn"> Go Back</Button>
       </NavLink>

@@ -23,6 +23,7 @@ const Header = () => {
     <MainHeader>
       <NavLink to="/">
         <img src="" alt="logo" className="logo" />
+        <p>Payment Planet</p>
       </NavLink>
       <Navbar />
     </MainHeader>
