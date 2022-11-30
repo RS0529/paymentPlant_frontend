@@ -6,8 +6,11 @@ import { GlobalStyle } from "./GlobalStyle";
 import Planet from './pages/Planet';
 import Home from './pages/Home';
 import Card from './pages/Card';
-// import GoToTop from './components/layout/GoToTop'
-
+import Payment from './pages/Payment';
+import Prepaid from './pages/Prepaid';
+import GoToTop from './components/GoToTop'
+import ErrorPage from './pages/ErrorPage';
+import Footer from './components/Footer';
 const App = () => {
 
  const theme = {
@@ -35,19 +38,18 @@ const App = () => {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      {/* <GoToTop/> */}
+      <GoToTop/>
       <BrowserRouter>
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path="/payment" element={<Payment />} /> */}
+          <Route path="/payment" element={<Payment />} />
           <Route path="/planet" element={<Planet />} />
           <Route path="/card" element={<Card />} />
-
-          {/* <Route path="/prepaid" element={<Prepaid />} /> */}
-          {/* <Route path="*" element={<PageNotFound />} /> */}
+          <Route path="/prepaid" element={<Prepaid />} />
+          <Route path="*" element={< ErrorPage/>} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );

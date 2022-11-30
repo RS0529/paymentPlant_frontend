@@ -2,14 +2,22 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 *{
-  margin: 0;
+  ${
+    "" /* margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Work Sans', sans-serif; */
+  }
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Nunito' , sans-serif;
+
+  
  }
 html {
   font-size: 62.5%;
-  /* scroll-behavior: smooth; */
+   scroll-behavior: smooth; 
   /* 1rem = 10px */
   overflow-x: hidden;
 }
@@ -65,36 +73,36 @@ li {
   max-width: 120rem;
   margin: 0 auto;
 }
-.grid-row {
-  display:grid ;
-  gap:3rem;
+.grid {
+  display: grid;
+  gap: 9rem;
 }
-
-${'' /* .grid-two- {
+.grid-two-column {
   grid-template-columns: repeat(2, 1fr);
-} */}
-.grid-four-row {
-  grid-template-columns: repeat(4, 5fr);
-  margin: 2rem;
 }
-${'' /* .grid-four-column{
+.grid-three-column {
+  grid-template-columns: repeat(3, 1fr);
+  margin:2rem ;
+}
+.grid-four-column{
    grid-template-columns: 1fr 1.2fr .5fr .8fr ;
-} */}
+}
   .common-heading {
       font-size: 3.8rem;
       font-weight: 600;
       margin-bottom: 6rem;
       text-transform: capitalize;
     }
-    input, textarea{
+    ${'' /* input{
     max-width: 50rem;
     color: ${({ theme }) => theme.colors.black};
     padding: 1.6rem 2.4rem;
     border: 1px solid ${({ theme }) => theme.colors.border};
     text-transform: uppercase;
    box-shadow: ${({ theme }) => theme.colors.shadowSupport};
-}
-    input[type="submit"]{
+   border-radius:2px ;
+} */}
+    ${'' /* input[type="submit"]{
     max-width: 16rem;
     margin-top: 2rem;
     background-color: ${({ theme }) => theme.colors.btn};
@@ -105,7 +113,7 @@ ${'' /* .grid-four-column{
     text-transform: uppercase;
     font-size: 1.8rem;
     cursor: pointer;
-    }
+    } */}
 /* ===========================================
 /* media queries  
 ======================================= */

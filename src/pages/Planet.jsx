@@ -1,12 +1,9 @@
-import React, { useContext } from "react";
+
+import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Button } from "../styles/Button";
-// import { useGlobalContext } from "../../context/context";
 
-// using props destructuring
 const Planet = () => {
-//   const { name, image } = useGlobalContext();
 
   const Wrapper = styled.section`
     padding: 9rem 0;
@@ -21,18 +18,19 @@ const Planet = () => {
     .hero-top-data {
       text-transform: none;
       font-weight: 500;
-      font-size: 1.5rem;
-      color: ${({ theme }) => theme.colors.helper};
+      font-size: 2rem;
+      color: ${({ theme }) => theme.colors.red};
     }
     .hero-heading {
       text-transform: none;
       font-size: 4rem;
+      text-align:left ;
     }
-    .hero-para {
+    /* .hero-para {
       margin-top: 1.5rem;
       margin-bottom: 3.4rem;
       max-width: 60rem;
-    }
+    } */
     .section-hero-image {
       display: flex;
       justify-content: center;
@@ -56,17 +54,16 @@ const Planet = () => {
       <div className="container grid grid-two-column">
         <div className="section-hero-data">
           <p className="hero-top-data">Payment Planet Prepaid Card</p>
-          <h1 className="hero-heading">The Card that takes You to Different Places</h1>
-          {/* <p className="hero-para">
-           The Card jkhsklvjjfoJAOFJ K;LADK;KVMGL/;
-          </p> */}
-          <Button className="btn hireme-btn">
-            <NavLink to="/contact">Hire Me</NavLink>
-          </Button>
+          <h2 className="hero-heading">
+            The Card that takes You to Different Places
+          </h2>
+          <picture>
+            <img src="images/playstore.jpg" alt="" className="" />
+          </picture>
         </div>
         <div className="section-hero-image">
           <picture>
-            <img src="" alt="" className="hero-img" />
+            <img src="images/hero.jpg" alt="" className="hero-img" />
           </picture>
         </div>
       </div>

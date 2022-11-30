@@ -9,7 +9,7 @@ const Card = () => {
   return (
     <Wrapper className="section">
       <h4 className="common-heading">Go Place This Card</h4>
-      <div className="container grid-row grid-four-row">
+      <div className="container  grid grid-three-column">
         <div className="card">
           <CgLock name="" className="card-icon" />
           <h4 className="card-heading">Locked in rates</h4>
@@ -31,8 +31,6 @@ const Card = () => {
             <p>A great Hii mkkkv kkkjg hhjjkk jkjkjggf </p>
           </div>
         </div>
-        
-      
       </div>
     </Wrapper>
   );
